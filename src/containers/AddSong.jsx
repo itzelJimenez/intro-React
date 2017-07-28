@@ -9,13 +9,17 @@ export default class AddSong extends Component {
 		};	
 	}
 
-	handleSubmit(e){
+	handleSubmit = (e) => {
 		e.preventDefault();
+		const newSong = this.state.newSong;
+		this.props.addSongToPlayList(newSong); //Envia la prop para ser actualizada en App.js
 	}
 
-	updateState(e){
+	updateState=(e)=>{
 		const newSong = e.target.value;
-		console.log(newSong)
+		this.setState({
+			newSong: newSong,
+		});
 	}
 
 	render() {

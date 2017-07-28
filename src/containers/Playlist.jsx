@@ -4,10 +4,10 @@ import Song from '../components/Song'
 
 export default class Playlist extends Component {
 	render() {
-		const playlist = ['Shape of You', 'Shaky Shaky', 'Despacito'];
+		const playlist = this.props.songs;
 		return(
 			<ul>
-				{playlist.map(item => <Song name={item}/>)}
+				{playlist.map((item, i ) => <Song key={i} name={item}/>)}
 			</ul>
 		)
 	}
