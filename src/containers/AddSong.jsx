@@ -15,6 +15,7 @@ export default class AddSong extends Component {
 
 	updateState(e){
 		const newSong = e.target.value;
+		console.log(newSong)
 	}
 
 	render() {
